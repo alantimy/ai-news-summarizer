@@ -5,6 +5,9 @@ st.set_page_config(page_title="News Summarizer")
 
 st.title("📰 News Summarizer")
 
+st.info("⚡ Tip: Paste at least 3–4 paragraphs for best results.")
+
+
 @st.cache_resource
 def load_model():
     return pipeline(
