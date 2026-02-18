@@ -20,62 +20,52 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ===== GLOBAL ===== */
+/* ===== APP BACKGROUND ===== */
 .stApp {
     background-color: #f4f4f4;
-    color: #000000 !important;
+    color: #000000;
     font-family: 'Lato', sans-serif;
 }
 
-/* Headings */
+/* ===== HEADINGS ===== */
 h1, h2, h3 {
-    color: #000000 !important;
+    color: #000000;
     font-weight: 700;
 }
 
-/* Widget labels */
+/* ===== WIDGET LABELS ===== */
 [data-testid="stWidgetLabel"] {
     color: #000000 !important;
-    font-weight: 500;
 }
 
-/* ===== SELECTBOX FIX (BIGGEST ISSUE) ===== */
-div[data-baseweb="select"] {
-    background-color: #ffffff !important;
-    border-radius: 6px !important;
-}
-
-div[data-baseweb="select"] > div {
+/* ===== SELECTBOX (DROPDOWN) ===== */
+[data-testid="stSelectbox"] div[data-baseweb="select"] {
     background-color: #ffffff !important;
 }
 
-div[data-baseweb="select"] span {
+[data-testid="stSelectbox"] span {
     color: #000000 !important;
-}
-
-div[data-baseweb="select"] svg {
-    fill: #000000 !important;
+    opacity: 1 !important;
 }
 
 /* ===== SIDEBAR ===== */
 section[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
 }
 
-section[data-testid="stSidebar"] * {
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label {
     color: #000000 !important;
 }
 
 /* ===== TEXTAREA ===== */
-textarea {
+[data-testid="stTextArea"] textarea {
     background-color: #ffffff !important;
     color: #000000 !important;
-    border-radius: 8px !important;
 }
 
-/* ===== INPUT BOXES ===== */
+/* ===== INPUTS ===== */
 input {
-    background-color: #ffffff !important;
     color: #000000 !important;
 }
 
@@ -85,18 +75,17 @@ input {
 }
 
 /* ===== BUTTONS ===== */
-.stButton>button {
+.stButton > button {
     background-color: #ffcc00 !important;
     color: #1a1a1a !important;
     border-radius: 6px;
     border: none;
     font-weight: 700;
-    transition: 0.25s ease;
+    transition: 0.2s ease;
 }
 
-.stButton>button:hover {
+.stButton > button:hover {
     background-color: #e6b800 !important;
-    transform: translateY(-1px);
 }
 
 /* ===== CARDS ===== */
@@ -110,6 +99,7 @@ input {
 
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
