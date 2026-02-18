@@ -17,73 +17,109 @@ st.set_page_config(
 )
 
 # Custom CSS for styling
-# Glassmorphism Modern Theme
 st.markdown("""
 <style>
 
-/* ===== Background ===== */
+/* ===== Import Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lato:wght@400&display=swap');
+
+/* ===== App Background ===== */
 .stApp {
-    background: linear-gradient(120deg,#1e3a8a,#0f172a);
-    color: white;
+    background-color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    color: #1a1a1a;
 }
 
-/* ===== Main container spacing ===== */
+/* ===== Header ===== */
+.header {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===== Main Content Wrapper ===== */
 .block-container {
-    padding-top: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
-/* ===== Glass Card Design ===== */
+/* ===== Cards ===== */
 .card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border-radius: 16px;
-    padding: 18px;
-    margin: 12px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-    transition: 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    padding: 15px;
+    transition: 0.2s ease;
 }
-
-/* Hover effect */
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    background-color: #eaeaea;
 }
 
 /* ===== Titles ===== */
 .title {
-    color: #60a5fa;
-    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    font-size: 1.4em;
+    color: #1a1a1a;
 }
 
-/* ===== Summary text ===== */
+/* ===== Summary ===== */
 .summary {
-    color: #cbd5f5;
     font-style: italic;
-    margin-top: 10px;
+    line-height: 1.6;
 }
 
 /* ===== Buttons ===== */
 .stButton>button {
-    background: linear-gradient(45deg,#2563eb,#3b82f6);
-    color: white;
-    border-radius: 12px;
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    border-radius: 5px;
     border: none;
-    padding: 10px 18px;
-    font-weight: bold;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 .stButton>button:hover {
-    background: linear-gradient(45deg,#1d4ed8,#2563eb);
+    background-color: #e6b800;
 }
 
 /* ===== Sidebar ===== */
 section[data-testid="stSidebar"] {
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 900px) {
+    html { font-size: 1em; }
+}
+
+@media (max-width: 600px) {
+    html { font-size: 0.9em; }
 }
 
 </style>
 """, unsafe_allow_html=True)
+
+
 
 
 # Load API key
