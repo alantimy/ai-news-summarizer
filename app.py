@@ -20,111 +20,124 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ===== Import Fonts ===== */
+/* ===== Google Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lato:wght@400&display=swap');
 
-/* ===== App Background ===== */
+/* ===== GLOBAL ===== */
 .stApp {
     background-color: #f4f4f4;
     font-family: 'Lato', sans-serif;
     color: #000000 !important;
 }
 
-/* Force all text to black */
-html, body, p, span, label, div {
+/* Main container width */
+.block-container {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+/* ===== HEADER STYLE ===== */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
     color: #000000 !important;
 }
 
-/* ===== Header ===== */
-.header {
-    background-color: #1a1a1a;
-    color: #ffffff !important;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 2em;
-    text-transform: uppercase;
-    border-radius: 8px;
-    margin-bottom: 20px;
+/* ===== FIX ALL SMALL TEXT ===== */
+label, p, span, div, textarea {
+    color: #000000 !important;
 }
 
-/* ===== Main Content Wrapper ===== */
-.block-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-/* ===== Cards ===== */
+/* ===== CARDS ===== */
 .card {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin: 20px 0;
-    padding: 15px;
-    transition: 0.2s ease;
-}
-.card:hover {
-    background-color: #eaeaea;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    padding: 18px;
+    margin: 18px 0;
+    transition: 0.25s ease;
 }
 
-/* ===== Titles ===== */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* ===== TITLES ===== */
 .title {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.4em;
-    color: #000000 !important;
 }
 
-/* ===== Summary ===== */
+/* ===== SUMMARY ===== */
 .summary {
     font-style: italic;
     line-height: 1.6;
+}
+
+/* ===== BUTTONS ===== */
+.stButton>button {
+    background-color: #ffcc00 !important;
+    color: #1a1a1a !important;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    padding: 10px 18px;
+    transition: 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #e6b800 !important;
+    transform: translateY(-1px);
+}
+
+/* ===== SELECTBOX ===== */
+div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+div[data-baseweb="select"] span {
     color: #000000 !important;
 }
 
-/* ===== Buttons ===== */
-.stButton>button {
-    background-color: #ffcc00;
-    color: #1a1a1a !important;
-    border-radius: 5px;
-    border: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-.stButton>button:hover {
-    background-color: #e6b800;
+/* ===== TEXT AREA ===== */
+textarea {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
 }
 
-/* ===== Sidebar ===== */
+/* ===== SLIDER ===== */
+.stSlider span {
+    color: #000000 !important;
+}
+
+/* ===== SIDEBAR ===== */
 section[data-testid="stSidebar"] {
     background-color: #ffffff;
 }
+
 section[data-testid="stSidebar"] * {
     color: #000000 !important;
 }
 
-/* ===== Footer ===== */
-.footer {
-    background-color: #1a1a1a;
-    color: #ffffff !important;
-    padding: 10px;
-    text-align: center;
-    border-radius: 8px;
-    margin-top: 20px;
+/* ===== INPUT BOXES ===== */
+input {
+    color: #000000 !important;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-    html { font-size: 1em; }
-}
-@media (max-width: 600px) {
-    html { font-size: 0.9em; }
+/* ===== SUCCESS / INFO BOX ===== */
+.stAlert {
+    border-radius: 8px;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
