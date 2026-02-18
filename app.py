@@ -20,62 +20,68 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ===== Google Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lato:wght@400&display=swap');
-
 /* ===== GLOBAL ===== */
 .stApp {
     background-color: #f4f4f4;
+    color: #000000 !important;
     font-family: 'Lato', sans-serif;
-    color: #000000 !important;
 }
 
-/* Main container width */
-.block-container {
-    max-width: 900px;
-    margin: auto;
-    padding-top: 2rem;
-}
-
-/* ===== HEADER STYLE ===== */
+/* Headings */
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif !important;
-    font-weight: 700 !important;
-    text-transform: uppercase;
     color: #000000 !important;
-}
-
-/* ===== FIX ALL SMALL TEXT ===== */
-label, p, span, div, textarea {
-    color: #000000 !important;
-}
-
-/* ===== CARDS ===== */
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    padding: 18px;
-    margin: 18px 0;
-    transition: 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-/* ===== TITLES ===== */
-.title {
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 1.4em;
 }
 
-/* ===== SUMMARY ===== */
-.summary {
-    font-style: italic;
-    line-height: 1.6;
+/* Widget labels */
+[data-testid="stWidgetLabel"] {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+/* ===== SELECTBOX FIX (BIGGEST ISSUE) ===== */
+div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+}
+
+div[data-baseweb="select"] span {
+    color: #000000 !important;
+}
+
+div[data-baseweb="select"] svg {
+    fill: #000000 !important;
+}
+
+/* ===== SIDEBAR ===== */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #000000 !important;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 8px !important;
+}
+
+/* ===== INPUT BOXES ===== */
+input {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* ===== SLIDER ===== */
+[data-testid="stSlider"] span {
+    color: #000000 !important;
 }
 
 /* ===== BUTTONS ===== */
@@ -85,8 +91,7 @@ label, p, span, div, textarea {
     border-radius: 6px;
     border: none;
     font-weight: 700;
-    padding: 10px 18px;
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .stButton>button:hover {
@@ -94,45 +99,13 @@ label, p, span, div, textarea {
     transform: translateY(-1px);
 }
 
-/* ===== SELECTBOX ===== */
-div[data-baseweb="select"] {
-    background-color: #ffffff !important;
-    border-radius: 6px !important;
-}
-
-div[data-baseweb="select"] span {
-    color: #000000 !important;
-}
-
-/* ===== TEXT AREA ===== */
-textarea {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border-radius: 8px !important;
-}
-
-/* ===== SLIDER ===== */
-.stSlider span {
-    color: #000000 !important;
-}
-
-/* ===== SIDEBAR ===== */
-section[data-testid="stSidebar"] {
+/* ===== CARDS ===== */
+.card {
     background-color: #ffffff;
-}
-
-section[data-testid="stSidebar"] * {
-    color: #000000 !important;
-}
-
-/* ===== INPUT BOXES ===== */
-input {
-    color: #000000 !important;
-}
-
-/* ===== SUCCESS / INFO BOX ===== */
-.stAlert {
-    border-radius: 8px;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 18px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 </style>
