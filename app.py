@@ -27,13 +27,18 @@ st.markdown("""
 .stApp {
     background-color: #f4f4f4;
     font-family: 'Lato', sans-serif;
-    color: #1a1a1a;
+    color: #000000 !important;
+}
+
+/* Force all text to black */
+html, body, p, span, label, div {
+    color: #000000 !important;
 }
 
 /* ===== Header ===== */
 .header {
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -69,19 +74,20 @@ st.markdown("""
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.4em;
-    color: #1a1a1a;
+    color: #000000 !important;
 }
 
 /* ===== Summary ===== */
 .summary {
     font-style: italic;
     line-height: 1.6;
+    color: #000000 !important;
 }
 
 /* ===== Buttons ===== */
 .stButton>button {
     background-color: #ffcc00;
-    color: #1a1a1a;
+    color: #1a1a1a !important;
     border-radius: 5px;
     border: none;
     font-weight: 700;
@@ -93,31 +99,33 @@ st.markdown("""
 
 /* ===== Sidebar ===== */
 section[data-testid="stSidebar"] {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #ffffff;
+}
+section[data-testid="stSidebar"] * {
+    color: #000000 !important;
 }
 
 /* ===== Footer ===== */
 .footer {
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 10px;
     text-align: center;
     border-radius: 8px;
     margin-top: 20px;
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
     html { font-size: 1em; }
 }
-
 @media (max-width: 600px) {
     html { font-size: 0.9em; }
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
