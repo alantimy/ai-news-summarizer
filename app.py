@@ -17,17 +17,74 @@ st.set_page_config(
 )
 
 # Custom CSS for styling
+# Glassmorphism Modern Theme
 st.markdown("""
-    <style>
-    .main { background-color: #f0f2f6; }
-    .stButton>button { background-color: #4CAF50; color: white; border-radius: 10px; padding: 10px 20px; }
-    .stButton>button:hover { background-color: #45a049; }
-    .card { background-color: white; border-radius: 10px; padding: 15px; margin: 10px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .title { color: #333; font-size: 24px; font-weight: bold; }
-    .summary { color: #555; font-style: italic; }
-    .sidebar .sidebar-content { background-color: #2c3e50; color: white; }
-    </style>
+<style>
+
+/* ===== Background ===== */
+.stApp {
+    background: linear-gradient(120deg,#1e3a8a,#0f172a);
+    color: white;
+}
+
+/* ===== Main container spacing ===== */
+.block-container {
+    padding-top: 2rem;
+}
+
+/* ===== Glass Card Design ===== */
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 18px;
+    margin: 12px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* ===== Titles ===== */
+.title {
+    color: #60a5fa;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ===== Summary text ===== */
+.summary {
+    color: #cbd5f5;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ===== Buttons ===== */
+.stButton>button {
+    background: linear-gradient(45deg,#2563eb,#3b82f6);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 10px 18px;
+    font-weight: bold;
+}
+.stButton>button:hover {
+    background: linear-gradient(45deg,#1d4ed8,#2563eb);
+}
+
+/* ===== Sidebar ===== */
+section[data-testid="stSidebar"] {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+</style>
 """, unsafe_allow_html=True)
+
 
 # Load API key
 NEWS_API_KEY = st.secrets.get("NEWS_API_KEY") or os.getenv("NEWS_API_KEY")
